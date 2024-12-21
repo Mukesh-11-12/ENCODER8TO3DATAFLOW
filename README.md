@@ -1,6 +1,5 @@
-#  EXP 5 :Implementation-of- Encoder 8 To 3 in Dataflow Modelling using-verilog
-## NAME : Mukesh D
-## REGISTRATION NUMBER : 24900735
+### ENCODER 8TO3 DATAFLOW Modelling
+
 **AIM:**
 
 To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables
@@ -36,32 +35,40 @@ Logical circuit of the above expressions is given below:
 Figure 02  Encoder 8 * 3
 
 **Procedure**
-
-/* write all the steps invloved */
+1. Type the program in Quartus software.
+2. Compile and run the program.
+3. Generate the RTL schematic and save the logic diagram.
+4. Create nodes for inputs and outputs to generate the timing diagram.
+5. For different input combinations generate the timing diagram.
 
 **PROGRAM**
-
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
-
-Developed by:Vaitheswaran N RegisterNumber: 24901212
-*/
-
-**RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
-![ENCODER DE DIAGRAM](https://github.com/user-attachments/assets/4f06be54-58b7-437f-9b97-700d6ffe1bc7)
-
-**CODE**
 ```
-modmule enc(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7); 
-input y0,y1,y2,y3,y4,y5,y6,y7; 
-output a,b,c; 
-assign a= ( y4 | y5 | y6 | y7); 
-assign b= ( y2 | y3 | y6 | y7); 
-assign c= ( y1 | y3 | y5 | y7); 
+module exp5(din,a,b,c);
+input [0:7] din;
+output a,b,c;
+assign a=(din[4]| din[5]| din[6]| din[7]);
+assign b=(din[2]| din[3]| din[6]| din[7]);
+assign c=(din[1]| din[3]| din[5]| din[7]);
 endmodule
 ```
 
+/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
+
+Developed by: MUKESH RegisterNumber: 24900735
+*/
+
+**RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+
+![Screenshot 2024-11-22 120148](https://github.com/user-attachments/assets/2ca02967-b9df-4f13-be2d-a2a357ee4c34)
+
+
+**TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
+
+![Screenshot 2024-11-22 120351](https://github.com/user-attachments/assets/19570ebd-7404-4d76-9c31-ce7776b1129a)
+
 **RESULTS**
-![ENCODER DE OUTPUT](https://github.com/user-attachments/assets/1484f791-2717-4535-b553-485ddbb04658)
+  The Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables are verified by using Verilog programming.
+
 
 
 
